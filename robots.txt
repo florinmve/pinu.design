@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# CSS and JS are intentionally NOT blocked — Google needs to load them to
+# render the page and assess mobile-friendliness.
+
+# Sitemap
+Sitemap: https://pinu.design/sitemap.xml
