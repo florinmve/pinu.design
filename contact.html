@@ -109,7 +109,11 @@
                 </div>
             </div>
 
-            <form id="contact-form" class="contact-form" novalidate>
+            <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <input type="hidden" name="access_key" value="2cf885c9-91b1-42fa-bcf2-ecad211bd1ad" />
+                <input type="hidden" name="subject" value="Mesaj nou de pe pinu.design" />
+                <input type="hidden" name="from_name" value="Formular pinu.design" />
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
                 <h2>Trimite-ne un mesaj</h2>
                 <p style="color:var(--color-muted); margin-bottom: 32px;">Câmpurile cu * sunt obligatorii.</p>
 

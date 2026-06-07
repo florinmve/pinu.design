@@ -149,23 +149,49 @@
         });
     }
 
-    /* ---------- Contact form (no backend — graceful demo) ---------- */
+    /* ---------- Contact form (Web3Forms) ---------- */
     const form = document.getElementById('contact-form');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        const success = form.querySelector('.form-success');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const okText = 'Mulțumim! Mesajul a fost trimis. Revenim cât de curând.';
+        const errText = 'Hopa, ceva n-a mers. Scrie-ne direct la contact@pinu.design.';
+
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const success = form.querySelector('.form-success');
-            // very light client-side validation already enforced by `required`
-            form.reset();
-            if (success) {
-                success.classList.add('is-visible');
+            if (!form.checkValidity()) { form.reportValidity(); return; }
+
+            const label = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Se trimite…'; }
+
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { Accept: 'application/json' },
+                    body: new FormData(form),
+                });
+                const data = await res.json();
+                if (!data.success) throw new Error(data.message || 'submit failed');
+
+                form.reset();
+                if (success) {
+                    success.textContent = okText;
+                    success.classList.remove('is-error');
+                    success.classList.add('is-visible');
+                }
                 if (window.gtag) {
                     window.gtag('event', 'generate_lead', {
                         event_category: 'engagement',
                         event_label: 'contact_form',
                     });
                 }
-                setTimeout(() => success.classList.remove('is-visible'), 6000);
+            } catch (err) {
+                if (success) {
+                    success.textContent = errText;
+                    success.classList.add('is-visible', 'is-error');
+                }
+            } finally {
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = label; }
             }
         });
     }

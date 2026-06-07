@@ -1197,6 +1197,11 @@ section { padding: var(--section-y) 0; position: relative; }
     color: #1d6f30;
 }
 .form-success.is-visible { display: block; }
+.form-success.is-error {
+    background: rgba(192, 57, 43, 0.1);
+    border-color: rgba(192, 57, 43, 0.3);
+    color: #c0392b;
+}
 
 /* -----------------------------
    Footer (orange)
