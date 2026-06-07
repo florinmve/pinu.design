@@ -1317,6 +1317,8 @@ section { padding: var(--section-y) 0; position: relative; }
     .contact-card { grid-template-columns: 1fr; }
     /* Stacked on mobile: animation first, then the text block — for every block */
     .service-block__media { order: -1; max-width: 460px; justify-self: center; }
+    /* Despre noi hero: imaginea apare înaintea textului pe mobil */
+    .about-hero__image { order: -1; }
 
     .subhero__grid { grid-template-columns: 1fr; gap: 36px; }
     .subhero__visual img { margin: 0 auto; max-width: 340px; }
