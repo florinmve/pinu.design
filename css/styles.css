@@ -1101,14 +1101,17 @@ section { padding: var(--section-y) 0; position: relative; }
 
 .contact-section { padding: var(--section-y) 0; }
 .contact-card {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    align-items: stretch;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 1px solid var(--color-line);
     box-shadow: var(--shadow-md);
-    background: #fff;
+    padding: clamp(32px, 5vw, 64px);
+    color: #fff;
+    background-color: var(--color-dark);
+    background-image: url("../assets/images/bg-servicii.jpg");
+    background-image: -webkit-image-set(url("../assets/images/bg-servicii.webp") type("image/webp"), url("../assets/images/bg-servicii.jpg") type("image/jpeg"));
+    background-image: image-set(url("../assets/images/bg-servicii.webp") type("image/webp"), url("../assets/images/bg-servicii.jpg") type("image/jpeg"));
+    background-size: cover;
+    background-position: center;
 }
 .contact-info {
     background: var(--color-dark);
@@ -1149,11 +1152,10 @@ section { padding: var(--section-y) 0; position: relative; }
 .contact-info__value { color: #fff; font-weight: 600; font-size: 1.02rem; }
 
 .contact-form {
-    background: #fff;
-    border-radius: 0;
-    padding: 48px;
+    background: transparent;
+    padding: 0;
 }
-.contact-form h2 { margin-bottom: 8px; }
+.contact-form h2 { margin-bottom: 8px; color: #fff; }
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1165,7 +1167,7 @@ section { padding: var(--section-y) 0; position: relative; }
     display: block;
     font-size: 0.84rem;
     font-weight: 700;
-    color: var(--color-dark);
+    color: #fff;
     margin-bottom: 6px;
 }
 .form-field input,
@@ -1211,7 +1213,7 @@ section { padding: var(--section-y) 0; position: relative; }
     gap: 10px;
     margin: 4px 0 24px;
     font-size: 0.86rem;
-    color: var(--color-muted);
+    color: rgba(255, 255, 255, 0.78);
     line-height: 1.5;
 }
 .form-consent input { margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; accent-color: var(--color-orange); }
@@ -1247,6 +1249,9 @@ section { padding: var(--section-y) 0; position: relative; }
     z-index: 1;
     margin-top: -1px;
 }
+/* Footer full-width: conținutul se întinde pe toată lățimea (nu e limitat la --container) */
+.footer .container { max-width: none; padding-left: clamp(28px, 5vw, 72px); padding-right: clamp(28px, 5vw, 72px); }
+.footer__meta { color: #fff; font-family: var(--font-ui); font-weight: 600; font-size: 0.9rem; margin-top: 8px; line-height: 1.5; }
 .footer__grid {
     display: grid;
     grid-template-columns: 1.1fr 1fr 1fr 1.2fr;
@@ -1392,8 +1397,6 @@ section { padding: var(--section-y) 0; position: relative; }
     .form-row { grid-template-columns: 1fr; }
 
     .service-block__media { padding: 30px; }
-    .contact-info,
-    .contact-form { padding: 30px 24px; }
 
     .footer__bottom { flex-direction: column; align-items: flex-start; }
 }

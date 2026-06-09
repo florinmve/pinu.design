@@ -155,7 +155,7 @@
         const success = form.querySelector('.form-success');
         const submitBtn = form.querySelector('button[type="submit"]');
         const okText = 'Mulțumim! Mesajul a fost trimis. Revenim cât de curând.';
-        const errText = 'Hopa, ceva n-a mers. Scrie-ne direct la contact@pinu.design.';
+        const errText = 'Hopa, ceva n-a mers. Scrie-ne direct la contact@pinudesign.ro.';
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
