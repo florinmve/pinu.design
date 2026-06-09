@@ -5,4 +5,4 @@ Allow: /
 # render the page and assess mobile-friendliness.
 
 # Sitemap
-Sitemap: https://pinu.design/sitemap.xml
+Sitemap: https://pinudesign.ro/sitemap.xml
