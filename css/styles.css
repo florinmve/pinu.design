@@ -1267,8 +1267,8 @@ section { padding: var(--section-y) 0; position: relative; }
     background: transparent;
     box-shadow: none;
     padding: 0;
-    width: 92px;
-    height: 92px;
+    width: 184px;
+    height: 184px;
 }
 .footer h4 {
     color: var(--color-dark);
