@@ -42,7 +42,7 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Pinu Design",
-      "alternateName": "Pinu Design Studio",
+      "alternateName": "Pinu Design PFA · București, România",
       "url": "https://pinu.design/",
       "logo": "https://pinu.design/assets/images/cerc-btn.png",
       "description": "Studio creativ de branding, design web, design grafic și animație.",
@@ -63,23 +63,29 @@
       "inLanguage": "ro-RO"
     }
     </script>
-
-    <!-- Google tag (gtag.js) — replace G-XXXXXXX with your GA4 ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
-      gtag('config', 'AW-XXXXXXXXX');
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://pinu.design/#business",
+      "name": "Pinu Design",
+      "image": "https://pinu.design/assets/images/cerc-btn.png",
+      "url": "https://pinu.design/",
+      "email": "contact@pinu.design",
+      "description": "Studio creativ de branding, design web, design grafic și animație din România.",
+      "areaServed": "RO",
+      "address": { "@type": "PostalAddress", "addressLocality": "București", "addressCountry": "RO" },
+      "priceRange": "$$"
+    }
     </script>
+
 </head>
 <body>
 
 <header class="nav">
     <div class="container nav__inner">
         <a href="index.html" class="nav__logo" aria-label="Pinu Design — acasă">
-            <span class="nav__logo-lottie" data-lottie data-src="assets/animations/logo.json"></span>
+            <span class="nav__logo-lottie" data-lottie data-src="assets/animations/logo.json" aria-hidden="true"></span>
         </a>
         <div class="nav__right">
             <nav class="nav__links" aria-label="Meniu principal">
@@ -163,7 +169,7 @@
             <div class="about__image reveal reveal--delay-1">
                 <picture>
                     <source srcset="assets/images/despre-noi.webp" type="image/webp" />
-                    <img src="assets/images/despre-noi.jpg" alt="Echipa Pinu Design — Denisa și Florin alături de Pifty și Nutzi" />
+                    <img src="assets/images/despre-noi.jpg" alt="Echipa Pinu Design — Denisa și Florin alături de Pifty și Nutzi" width="800" height="800" loading="lazy" decoding="async" />
                 </picture>
             </div>
         </div>
@@ -181,7 +187,7 @@
         <div class="services__grid">
             <article class="service-card reveal">
                 <div class="service-card__icon">
-                    <div class="lottie" data-lottie data-src="assets/animations/branding.json"></div>
+                    <div class="lottie" data-lottie data-src="assets/animations/branding.json" aria-hidden="true"></div>
                 </div>
                 <h3>Branding și identitate vizuală</h3>
                 <p>Logo, identitate vizuală și ghid de brand — un sistem coerent, ușor de folosit oriunde apare brandul tău.</p>
@@ -195,7 +201,7 @@
 
             <article class="service-card reveal reveal--delay-1">
                 <div class="service-card__icon">
-                    <div class="lottie" data-lottie data-src="assets/animations/web-design.json"></div>
+                    <div class="lottie" data-lottie data-src="assets/animations/web-design.json" aria-hidden="true"></div>
                 </div>
                 <h3>Website și App Design</h3>
                 <p>UI/UX pentru site-uri, magazine online și aplicații — intuitiv, rapid și optimizat pentru conversie.</p>
@@ -209,7 +215,7 @@
 
             <article class="service-card reveal reveal--delay-2">
                 <div class="service-card__icon">
-                    <div class="lottie" data-lottie data-src="assets/animations/graphic-design.json"></div>
+                    <div class="lottie" data-lottie data-src="assets/animations/graphic-design.json" aria-hidden="true"></div>
                 </div>
                 <h3>Design grafic</h3>
                 <p>Materiale de promovare cap-coadă: print, ambalaje, social media — toate în același stil.</p>
@@ -223,7 +229,7 @@
 
             <article class="service-card reveal reveal--delay-3">
                 <div class="service-card__icon">
-                    <div class="lottie" data-lottie data-src="assets/animations/motion.json"></div>
+                    <div class="lottie" data-lottie data-src="assets/animations/motion.json" aria-hidden="true"></div>
                 </div>
                 <h3>Animație grafică</h3>
                 <p>Animație și motion graphics: logo-uri animate, explainere și reclame care prind viață pe ecran.</p>
@@ -248,7 +254,7 @@
         <div class="footer__grid">
             <div class="footer__brand">
                 <a href="index.html" class="nav__logo">
-                    <span class="nav__logo-lottie" data-lottie data-src="assets/animations/logo.json"></span>
+                    <span class="nav__logo-lottie" data-lottie data-src="assets/animations/logo.json" aria-hidden="true"></span>
                 </a>
             </div>
             <div>
@@ -266,20 +272,22 @@
             <div>
                 <h4>Legal</h4>
                 <ul>
-                    <li><a href="#">Politica de Confidențialitate</a></li>
-                    <li><a href="#">Politica privind Cookie-urile</a></li>
-                    <li><a href="#">Termeni și condiții</a></li>
+                    <li><a href="confidentialitate.html">Politica de Confidențialitate</a></li>
+                    <li><a href="cookies.html">Politica de Cookie-uri</a></li>
+                    <li><a href="termeni.html">Termeni și condiții</a></li>
+                    <li><a href="https://anpc.ro/" target="_blank" rel="noopener">ANPC</a></li>
+                    <li><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">SOL — litigii online</a></li>
                 </ul>
                 <h4 style="margin-top:24px;">Urmărește-ne</h4>
                 <div class="footer__socials">
-                    <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19h-3v-5c0-1.2-.4-2-1.6-2-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8V19h-3v-9h3v1.3c.4-.6 1.1-1.5 2.7-1.5 2 0 3.6 1.3 3.6 4V19zM5.7 8.7c-1 0-1.7-.7-1.7-1.7s.7-1.7 1.7-1.7 1.7.7 1.7 1.7-.7 1.7-1.7 1.7zM7 19H4v-9h3v9z"/></svg></a>
-                    <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l1-4h-4V7c0-1.2.4-2 2.2-2H17V1.4c-.3 0-1.4-.1-2.7-.1C11.6 1.3 10 2.9 10 6v3H7v4h3v9h3z"/></svg></a>
-                    <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/company/pinudesign" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19h-3v-5c0-1.2-.4-2-1.6-2-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8V19h-3v-9h3v1.3c.4-.6 1.1-1.5 2.7-1.5 2 0 3.6 1.3 3.6 4V19zM5.7 8.7c-1 0-1.7-.7-1.7-1.7s.7-1.7 1.7-1.7 1.7.7 1.7 1.7-.7 1.7-1.7 1.7zM7 19H4v-9h3v9z"/></svg></a>
+                    <a href="https://www.facebook.com/pinudesign" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l1-4h-4V7c0-1.2.4-2 2.2-2H17V1.4c-.3 0-1.4-.1-2.7-.1C11.6 1.3 10 2.9 10 6v3H7v4h3v9h3z"/></svg></a>
+                    <a href="https://www.instagram.com/pinu.design/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
                 </div>
             </div>
         </div>
         <div class="footer__bottom">
-            <p>Copyright © <span id="footer-year">2026</span> Pinu Design Studio</p>
+            <p>Copyright © <span id="footer-year">2026</span> Pinu Design PFA · București, România</p>
             <p>Pin it. Love it. Share it.</p>
         </div>
     </div>

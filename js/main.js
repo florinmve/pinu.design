@@ -179,12 +179,6 @@
                     success.classList.remove('is-error');
                     success.classList.add('is-visible');
                 }
-                if (window.gtag) {
-                    window.gtag('event', 'generate_lead', {
-                        event_category: 'engagement',
-                        event_label: 'contact_form',
-                    });
-                }
             } catch (err) {
                 if (success) {
                     success.textContent = errText;
