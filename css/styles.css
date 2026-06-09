@@ -583,6 +583,9 @@ section { padding: var(--section-y) 0; position: relative; }
     pointer-events: none;
 }
 .services > .container { position: relative; z-index: 1; }
+/* Acoperă cusăturile de 1px (gol de rotunjire subpixel) de la marginile
+   secțiunilor full-bleed cu bg-servicii — vizibile mai ales pe mobil */
+.services, .subhero { box-shadow: 0 1px 0 var(--color-dark), 0 -1px 0 var(--color-dark); }
 
 .services__title {
     font-size: clamp(2rem, 4.5vw, 3.4rem);
@@ -1210,6 +1213,10 @@ section { padding: var(--section-y) 0; position: relative; }
     background: var(--color-orange);
     color: var(--color-dark);
     padding: var(--section-y) 0 28px;
+    /* trage footer-ul 1px peste secțiunea de deasupra ca să acopere cusătura subpixel */
+    position: relative;
+    z-index: 1;
+    margin-top: -1px;
 }
 .footer__grid {
     display: grid;
