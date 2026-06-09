@@ -330,7 +330,7 @@ section { padding: var(--section-y) 0; position: relative; }
     }
     .nav__right:hover .nav__toggle-arrow,
     .nav__right:focus-within .nav__toggle-arrow {
-        transform: rotate(-135deg);
+        transform: rotate(225deg);
     }
 }
 .nav__links a {
@@ -369,9 +369,9 @@ section { padding: var(--section-y) 0; position: relative; }
 .nav__toggle:hover { background: var(--color-orange-dark); }
 .nav__toggle-arrow {
     transition: transform var(--transition);
-    transform: rotate(-90deg);                 /* default: points left */
+    transform: rotate(45deg);                  /* default: points top-right (↗) */
 }
-.nav.is-open .nav__toggle-arrow { transform: rotate(-135deg); }  /* open: 45° toward bottom-left */
+.nav.is-open .nav__toggle-arrow { transform: rotate(225deg); }  /* open: flips to bottom-left (↙) */
 
 /* -----------------------------
    Hero
